@@ -1,0 +1,23 @@
+{
+  "name": "Voxelinator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martonban/Voxelinator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martonban/Voxelinator/issues"
+  },
+  "homepage": "https://github.com/martonban/Voxelinator#readme",
+  "devDependencies": {
+    "@types/three": "^0.131.0"
+  }
+}
