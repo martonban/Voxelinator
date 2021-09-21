@@ -5,6 +5,23 @@ const scene = new THREE.Scene();
 
 //Kamera létrehozása
 
+
+const sizes = {
+    width: window.innerWidth,
+    height: window.innerHeight
+}
+
+window.addEventListener('resize', () => {
+    sizes.width = window.innerWidth;
+    sizes.height = window.innerHeight;
+
+    camera.aspect = sizes.width/sizes.height;
+    camera.updateProjectionMatrix();
+    renderer.setSize(sizes.width,sizes.height);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+})
+
+
 const camera = new THREE.PerspectiveCamera(45,16/9);
 camera.position.z = 5;
 camera.position.y = 3;
@@ -16,7 +33,7 @@ camera.rotateY = 20;
 const renderer = new THREE.WebGLRenderer();
 
 //Cavas Újraméterezése
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(sizes.width, sizes.height);
 
 // Canvas létrehozása
 document.body.appendChild(renderer.domElement);
